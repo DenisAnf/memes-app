@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <meta name="Author" content="Denis A" />
+      <meta name="Copyright" content="Denis A" />
+      <meta name="Address" content="Санкт-Петербург" />
+
+      <meta property="og:locale" content="ru_RU" />
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="Movies search" />
+      <meta property="og:title" content="Поиск фильмов" />
+      <meta property="og:description" content="Найти фильм или сериал?" />
+      <meta property="og:image" content="./resourses/img/searchMovie.webp" />
+      <meta
+         property="og:url"
+         content="https://denisanf.github.io/movie-search-app"
+      />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="Denis A" />
+      <meta name="twitter:title" content="Поиск фильмов" />
+      <meta name="twitter:description" content="Найти фильм или сериал?" />
+      <meta name="twitter:image" content="./resourses/img/searchMovie.webp" />
+
+      <link rel="stylesheet" href="styles/style.css" />
+      <title>Поиск фильмов</title>
+      <link rel="shortcut icon" href="resourses/img/icon/favicon.ico" />
+
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="upgrade-insecure-requests"
+      />
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <h1 class="header__title">Что будем искать?</h1>
+         </div>
+      </header>
+
+      <main class="page">
+         <div class="container">
+            <section class="request">
+               <form action="" class="form">
+                  <input
+                     type="text"
+                     id="filmName"
+                     class="form__search"
+                     placeholder="Введите название"
+                     autocomplete="off"
+                  />
+                  <button
+                     type="button"
+                     id="filmSearchButton"
+                     class="form__searchBtn"
+                  ></button>
+               </form>
+               <div id="filmError" class="request__error"></div>
+            </section>
+
+            <section id="movies" class="movies">
+               <!--<div class="animation-loading">Загрузка</div>-->
+               <!--<ul class="movies__list">
+                  <li class="movies__list-item">
+                     <img
+                        class="item__poster"
+                        src="./resourses/img/searchMovie.webp"
+                        alt="Постер фильма"
+                     />
+                     <div class="item__description">
+                        <p class="item__title">Gravity</p>
+                        <p class="item__year">2022</p>
+                        <p class="item__type">film</p>
+                     </div>
+                  </li>
+               </ul>-->
+               <!--<div class="movie">
+                  <button type="button" class="movie__backBtn">
+                     &#9668; Назад к поиску
+                  </button>
+                  <div class="movie__info">
+                     <img
+                        class="movie__poster"
+                        src="./resourses/img/searchMovie.webp"
+                        alt="Постер фильма"
+                     />
+                     <div class="movie__description">
+                        <p class="movie__title">Batman Begins</p>
+                        <p class="movie__data">
+                           <span>Год: </span>
+                           <span class="movie__year">2005</span>
+                        </p>
+                        <p class="movie__data">
+                           <span>Рейтинг: </span>
+                           <span class="movie__rated">PG-13</span>
+                        </p>
+                        <p class="movie__data">
+                           <span>Дата выхода: </span>
+                           <span class="movie__released">15 june 2005</span>
+                        </p>
+                        <p class="movie__data">
+                           <span>Продолжительность: </span>
+                           <span class="movie__runtime">140 минут</span>
+                        </p>
+                        <p class="movie__data">
+                           <span>Жанр: </span>
+                           <span class="movie__genre"
+                              >Action, Crime, Drama</span
+                           >
+                        </p>
+                        <p class="movie__data">
+                           <span>Режиссер: </span>
+                           <span class="movie__director"
+                              >Christopher Nolan</span
+                           >
+                        </p>
+                        <p class="movie__data">
+                           <span>Сценарий: </span>
+                           <span class="movie__writer"
+                              >Bob Kane, David S. Goyer, Christopher Nolan</span
+                           >
+                        </p>
+                        <p class="movie__data">
+                           <span>Актеры: </span>
+                           <span class="movie__actors"
+                              >Christian Bale, Michael Caine, Ken Watanabe</span
+                           >
+                        </p>
+                     </div>
+                  </div>
+                  <div class="movie__plot">
+                     After witnessing his parents' death, Bruce learns the art
+                     of fighting to confront injustice. When he returns to
+                     Gotham as Batman, he must stop a secret society that
+                     intends to destroy the city.
+                  </div>
+               </div>-->
+            </section>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__telegram">
+            <a target="_blank" href="https://t.me/Denis_Bear_A">
+               @Denis_Bear_A
+            </a>
+         </div>
+         <div class="footer__cr">SC.CODE — 2023</div>
+      </footer>
+
+      <script src="js/index.js"></script>
+   </body>
+</html>
