@@ -34,7 +34,6 @@
          rel="icon"
          href="./resourses/img/icon/mems-icon.png"
       />
-      <!--<link rel="shortcut icon" href="resourses/img/icon/favicon.ico" />-->
    </head>
    <body>
       <header class="header">
@@ -47,15 +46,27 @@
          <div class="container">
             <section class="request">
                <form action="" class="form">
-                  <input
-                     type="text"
-                     id="filmName"
-                     class="form__search"
-                     placeholder="Введите текст"
-                     autocomplete="off"
-                  />
+                  <label>
+                     Текст сверху
+                     <input
+                        type="text"
+                        id="filmName"
+                        class="form__search"
+                        placeholder="Введите текст"
+                        autocomplete="off"
+                     />
+                  </label>
+                  <label>
+                     Текст снизу
+                     <input
+                        type="text"
+                        id="filmName"
+                        class="form__search"
+                        placeholder="Введите текст"
+                        autocomplete="off"
+                     />
+                  </label>
                </form>
-               <div id="filmError" class="request__error"></div>
             </section>
 
             <section id="movies" class="movies"></section>
