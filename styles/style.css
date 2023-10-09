@@ -85,9 +85,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*--------------------*/
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   font-family: "Arimo", sans-serif;
   background: #430179;
@@ -96,7 +93,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -104,25 +101,20 @@ body {
 .header {
   margin: 40px 0;
 }
-@media (max-width: 699px) {
+@media (max-width: 919px) {
   .header {
-    margin: calc(0.0527704485 * 100vw + 3.1134564644px) 0 20px;
+    margin: calc(0.0333889816 * 100vw + 9.3155258765px) 0 20px;
   }
 }
 .header__title {
   font-size: 36px;
   line-height: 40px;
-  padding: 0 40px;
+  text-align: center;
 }
-@media (max-width: 699px) {
+@media (max-width: 919px) {
   .header__title {
-    font-size: calc(0.0316622691 * 100vw + 13.8680738786px);
-    padding: 0 calc(0.0527704485 * 100vw + 3.1134564644px);
+    font-size: calc(0.020033389 * 100vw + 17.5893155259px);
   }
-}
-
-.page {
-  flex: 1 1 auto;
 }
 
 .footer {
@@ -134,4 +126,145 @@ body {
   padding: 15px;
   gap: 15px 50px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.page__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: stretch;
+  justify-content: center;
+}
+@media (max-width: 919px) {
+  .page__wrapper {
+    gap: 30px;
+  }
+}
+
+.input {
+  width: 300px;
+}
+@media (max-width: 919px) {
+  .input {
+    width: 500px;
+  }
+}
+@media (max-width: 519px) {
+  .input {
+    width: 100%;
+  }
+}
+.input__title {
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+}
+@media (max-width: 919px) {
+  .input__title {
+    margin-bottom: 20px;
+    font-size: calc(0.0133555927 * 100vw + 15.7262103506px);
+    line-height: calc(0.0133555927 * 100vw + 15.7262103506px);
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 919px) {
+  .option {
+    gap: 10px;
+  }
+}
+.option__memes, .option__top, .option__down {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 20px;
+}
+@media (max-width: 919px) {
+  .option__memes, .option__top, .option__down {
+    font-size: calc(0.0066777963 * 100vw + 13.8631051753px);
+    line-height: calc(0.0066777963 * 100vw + 13.8631051753px);
+  }
+}
+.option__select, .option__top-text, .option__down-text {
+  width: 100%;
+  max-width: 300px;
+  background-color: inherit;
+  border: 1px solid #f3f6f9;
+  border-radius: 10px;
+  padding: 10px;
+  color: inherit;
+  font-size: 16px;
+  line-height: 16px;
+}
+@media (max-width: 919px) {
+  .option__select, .option__top-text, .option__down-text {
+    font-size: calc(0.0033388982 * 100vw + 12.9315525876px);
+    line-height: calc(0.0033388982 * 100vw + 12.9315525876px);
+  }
+}
+.option__select:focus, .option__top-text:focus, .option__down-text:focus {
+  border: 1px solid #9327eb;
+}
+.option__select option {
+  background: #430179;
+  color: inherit;
+}
+
+.meme__wrapper {
+  position: relative;
+}
+.meme__title {
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+}
+@media (max-width: 919px) {
+  .meme__title {
+    margin-bottom: 20px;
+    font-size: calc(0.0133555927 * 100vw + 15.7262103506px);
+    line-height: calc(0.0133555927 * 100vw + 15.7262103506px);
+  }
+}
+.meme__img {
+  display: block;
+  width: 500px;
+  max-height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 519px) {
+  .meme__img {
+    width: 100%;
+  }
+}
+.meme__label-top, .meme__label-down {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 20px);
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+  font-size: 20px;
+  line-height: 20px;
+}
+@media (max-width: 919px) {
+  .meme__label-top, .meme__label-down {
+    font-size: calc(0.0066777963 * 100vw + 13.8631051753px);
+    line-height: calc(0.0066777963 * 100vw + 13.8631051753px);
+  }
+}
+.meme__label-down {
+  top: auto;
+  bottom: 10px;
 }

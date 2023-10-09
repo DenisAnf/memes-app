@@ -14,9 +14,6 @@ $fontfamily: "Arimo", sans-serif;
 @import "_nullstyle";
 
 body {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
    height: 100%;
    font-family: $fontfamily;
    background: #430179;
@@ -26,7 +23,7 @@ body {
 }
 
 .container {
-   max-width: 700px;
+   max-width: 1180px;
    margin: 0 auto;
    padding: 0 10px;
 }
@@ -34,24 +31,19 @@ body {
 .header {
    margin: 40px 0;
 
-   @media (max-width: 699px) {
-      margin: calcSize(20, 40, 320, 699) 0 20px;
+   @media (max-width: 919px) {
+      margin: calcSize(20, 40, 320, 919) 0 20px;
    }
 
    &__title {
       font-size: 36px;
       line-height: 40px;
-      padding: 0 40px;
+      text-align: center;
 
-      @media (max-width: 699px) {
-         font-size: calcSize(24, 36, 320, 699);
-         padding: 0 calcSize(20, 40, 320, 699);
+      @media (max-width: 919px) {
+         font-size: calcSize(24, 36, 320, 919);
       }
    }
-}
-
-.page {
-   flex: 1 1 auto;
 }
 
 .footer {
@@ -63,4 +55,150 @@ body {
    padding: 15px;
    gap: 15px 50px;
    color: rgba(255, 255, 255, 0.5);
+}
+
+.page {
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      align-items: stretch;
+      justify-content: center;
+
+      @media (max-width: 919px) {
+         gap: 30px;
+      }
+   }
+}
+
+.input {
+   width: 300px;
+
+   @media (max-width: 919px) {
+      width: 500px;
+   }
+
+   @media (max-width: 519px) {
+      width: 100%;
+   }
+
+   &__title {
+      margin-bottom: 40px;
+      text-align: left;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 700;
+
+      @media (max-width: 919px) {
+         margin-bottom: 20px;
+         font-size: calcSize(20, 28, 320, 919);
+         line-height: calcSize(20, 28, 320, 919);
+      }
+   }
+}
+.option {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+   @media (max-width: 919px) {
+      gap: 10px;
+   }
+
+   &__memes,
+   &__top,
+   &__down {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 20px;
+      line-height: 20px;
+
+      @media (max-width: 919px) {
+         font-size: calcSize(16, 20, 320, 919);
+         line-height: calcSize(16, 20, 320, 919);
+      }
+   }
+
+   &__select,
+   &__top-text,
+   &__down-text {
+      width: 100%;
+      max-width: 300px;
+      background-color: inherit;
+      border: 1px solid #f3f6f9;
+      border-radius: 10px;
+      padding: 10px;
+      color: inherit;
+      font-size: 16px;
+      line-height: 16px;
+
+      @media (max-width: 919px) {
+         font-size: calcSize(14, 16, 320, 919);
+         line-height: calcSize(14, 16, 320, 919);
+      }
+
+      &:focus {
+         border: 1px solid #9327eb;
+      }
+   }
+
+   &__select option {
+      background: #430179;
+      color: inherit;
+   }
+}
+.meme {
+   &__wrapper {
+      position: relative;
+   }
+
+   &__title {
+      margin-bottom: 40px;
+      text-align: left;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 700;
+
+      @media (max-width: 919px) {
+         margin-bottom: 20px;
+         font-size: calcSize(20, 28, 320, 919);
+         line-height: calcSize(20, 28, 320, 919);
+      }
+   }
+
+   &__img {
+      display: block;
+      width: 500px;
+      max-height: 400px;
+      object-fit: contain;
+      object-position: center;
+
+      @media (max-width: 519px) {
+         width: 100%;
+      }
+   }
+
+   &__label-top,
+   &__label-down {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: calc(100% - 20px);
+      text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000,
+         0 -1px 1px #000;
+      font-size: 20px;
+      line-height: 20px;
+
+      @media (max-width: 919px) {
+         font-size: calcSize(16, 20, 320, 919);
+         line-height: calcSize(16, 20, 320, 919);
+      }
+   }
+
+   &__label-down {
+      top: auto;
+      bottom: 10px;
+   }
 }

@@ -15,10 +15,7 @@
       <meta property="og:title" content="Создание мемов" />
       <meta property="og:description" content="Создай свой мем!" />
       <meta property="og:image" content="./resourses/img/memes.png" />
-      <meta
-         property="og:url"
-         content="https://denisanf.github.io/movie-search-app"
-      />
+      <meta property="og:url" content="https://denisanf.github.io/memes-app/" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="Denis A" />
@@ -44,46 +41,59 @@
 
       <main class="page">
          <div class="container">
-            <section class="input">
-               <form action="" class="form">
-                  <label>
-                     Ваш город
-                     <select name="city" id="city-select">
-                        <option value="">-- Выберите город --</option>
-                        <option value="petersburg">Санкт-Петербург</option>
-                        <option value="samara">Самара</option>
-                        <option value="perm">Пермь</option>
-                        <option value="novosibirsk">Новосибирск</option>
-                     </select>
-                  </label>
-                  <label>
-                     Текст сверху
-                     <input
-                        type="text"
-                        id="filmName"
-                        class="form__search"
-                        placeholder="Введите текст"
-                        autocomplete="off"
-                     />
-                  </label>
-                  <label>
-                     Текст снизу
-                     <input
-                        type="text"
-                        id="filmName"
-                        class="form__search"
-                        placeholder="Введите текст"
-                        autocomplete="off"
-                     />
-                  </label>
-               </form>
-            </section>
+            <div class="page__wrapper">
+               <section class="input">
+                  <h2 class="input__title">Настройки:</h2>
+                  <form action="" class="option">
+                     <label class="option__memes">
+                        Мем
+                        <select
+                           name="memesSelect"
+                           id="memesSelect"
+                           class="option__select"
+                        >
+                           <option value="petersburg">Санкт-Петербург</option>
+                           <option value="samara" selected>Самара</option>
+                           <option value="perm">Пермь</option>
+                           <option value="novosibirsk">Новосибирск</option>
+                        </select>
+                     </label>
+                     <label class="option__top">
+                        Текст сверху
+                        <input
+                           type="text"
+                           id="labelTop"
+                           class="option__top-text"
+                           placeholder="Введите текст"
+                           autocomplete="off"
+                        />
+                     </label>
+                     <label class="option__down">
+                        Текст снизу
+                        <input
+                           type="text"
+                           id="labelDown"
+                           class="option__down-text"
+                           placeholder="Введите текст"
+                           autocomplete="off"
+                        />
+                     </label>
+                  </form>
+               </section>
 
-            <section id="meme" class="meme">
-               <div class="meme__label-top">Текст наверху</div>
-               <img src="./resourses/img/memes.png" alt="картинка" />
-               <div class="meme__label-down">Текст внизу</div>
-            </section>
+               <section id="meme" class="meme">
+                  <h2 class="meme__title">Мем:</h2>
+                  <div class="meme__wrapper">
+                     <div class="meme__label-top">Текст наверху</div>
+                     <img
+                        src="./resourses/img/memes.png"
+                        alt="мем"
+                        class="meme__img"
+                     />
+                     <div class="meme__label-down">Текст внизу</div>
+                  </div>
+               </section>
+            </div>
          </div>
       </main>
 
@@ -93,7 +103,7 @@
                @Denis_Bear_A
             </a>
          </div>
-         <div class="footer__cr">SC.CODE — 2023</div>
+         <div class="footer__cr">2023</div>
       </footer>
 
       <!--<script src="js/index.js"></script>-->
