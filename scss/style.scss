@@ -151,6 +151,10 @@ body {
 .meme {
    &__wrapper {
       position: relative;
+      background: #430179;
+      border-radius: 10px;
+      border: 1px solid #f3f6f9;
+      overflow: hidden;
    }
 
    &__title {
@@ -200,5 +204,31 @@ body {
    &__label-down {
       top: auto;
       bottom: 10px;
+   }
+
+   &__save {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      padding: 5px 10px;
+      text-align: center;
+      background: #430179;
+      border-radius: 10px;
+      border: 1px solid #f3f6f9;
+      color: #f3f6f9;
+      font-size: 14px;
+      line-height: 14px;
+      transition: all 300ms ease-in-out;
+
+      @media (max-width: 919px) {
+         font-size: calcSize(12, 14, 320, 919);
+         line-height: calcSize(12, 14, 320, 919);
+      }
+
+      &:hover,
+      &:focus {
+         color: #c04aee;
+         border: 1px solid #9327eb;
+      }
    }
 }

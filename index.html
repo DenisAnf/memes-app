@@ -81,9 +81,9 @@
                   </form>
                </section>
 
-               <section id="meme" class="meme">
+               <section class="meme">
                   <h2 class="meme__title">Мем:</h2>
-                  <div class="meme__wrapper">
+                  <div class="meme__wrapper" id="meme">
                      <div class="meme__label-top">Текст наверху</div>
                      <img
                         src="./resourses/img/memes.png"
@@ -92,6 +92,9 @@
                      />
                      <div class="meme__label-down">Текст внизу</div>
                   </div>
+                  <button class="meme__save" onclick="saveAsImage()">
+                     Сохранить мем как изображение
+                  </button>
                </section>
             </div>
          </div>
@@ -107,5 +110,20 @@
       </footer>
 
       <!--<script src="js/index.js"></script>-->
+
+      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+      <script>
+         function saveAsImage() {
+            var element = document.getElementById("meme");
+            html2canvas(element).then(function (canvas) {
+               const link = document.createElement("a");
+               document.body.appendChild(link);
+               link.download = "new-meme.jpg";
+               link.href = canvas.toDataURL("image/png");
+               link.target = "_blank";
+               link.click();
+            });
+         }
+      </script>
    </body>
 </html>
