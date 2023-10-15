@@ -179,7 +179,7 @@ body {
     gap: 10px;
   }
 }
-.option__memes, .option__top, .option__down {
+.option__memes, .option__top, .option__bottom {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -187,12 +187,12 @@ body {
   line-height: 20px;
 }
 @media (max-width: 919px) {
-  .option__memes, .option__top, .option__down {
+  .option__memes, .option__top, .option__bottom {
     font-size: calc(0.0066777963 * 100vw + 13.8631051753px);
     line-height: calc(0.0066777963 * 100vw + 13.8631051753px);
   }
 }
-.option__select, .option__top-text, .option__down-text {
+.option__select, .option__top-text, .option__bottom-text {
   width: 100%;
   max-width: 300px;
   background-color: inherit;
@@ -204,12 +204,12 @@ body {
   line-height: 16px;
 }
 @media (max-width: 919px) {
-  .option__select, .option__top-text, .option__down-text {
+  .option__select, .option__top-text, .option__bottom-text {
     font-size: calc(0.0033388982 * 100vw + 12.9315525876px);
     line-height: calc(0.0033388982 * 100vw + 12.9315525876px);
   }
 }
-.option__select:focus, .option__top-text:focus, .option__down-text:focus {
+.option__select:focus, .option__top-text:focus, .option__bottom-text:focus {
   border: 1px solid #9327eb;
 }
 .option__select option {
@@ -252,7 +252,7 @@ body {
     width: 100%;
   }
 }
-.meme__label-top, .meme__label-down {
+.meme__label-top, .meme__label-bottom {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -263,12 +263,12 @@ body {
   line-height: 20px;
 }
 @media (max-width: 919px) {
-  .meme__label-top, .meme__label-down {
+  .meme__label-top, .meme__label-bottom {
     font-size: calc(0.0066777963 * 100vw + 13.8631051753px);
     line-height: calc(0.0066777963 * 100vw + 13.8631051753px);
   }
 }
-.meme__label-down {
+.meme__label-bottom {
   top: auto;
   bottom: 10px;
 }

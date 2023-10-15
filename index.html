@@ -52,10 +52,13 @@
                            id="memesSelect"
                            class="option__select"
                         >
-                           <option value="petersburg">Санкт-Петербург</option>
-                           <option value="samara" selected>Самара</option>
-                           <option value="perm">Пермь</option>
-                           <option value="novosibirsk">Новосибирск</option>
+                           <option
+                              value="./resourses/img/memes.png"
+                              selected
+                              disabled
+                           >
+                              Выберите мем из списка
+                           </option>
                         </select>
                      </label>
                      <label class="option__top">
@@ -68,12 +71,12 @@
                            autocomplete="off"
                         />
                      </label>
-                     <label class="option__down">
+                     <label class="option__bottom">
                         Текст снизу
                         <input
                            type="text"
-                           id="labelDown"
-                           class="option__down-text"
+                           id="labelBottom"
+                           class="option__bottom-text"
                            placeholder="Введите текст"
                            autocomplete="off"
                         />
@@ -84,13 +87,18 @@
                <section class="meme">
                   <h2 class="meme__title">Мем:</h2>
                   <div class="meme__wrapper" id="meme">
-                     <div class="meme__label-top">Текст наверху</div>
+                     <div id="memeLabelTop" class="meme__label-top">
+                        Текст наверху
+                     </div>
                      <img
+                        id="memeImage"
                         src="./resourses/img/memes.png"
                         alt="мем"
                         class="meme__img"
                      />
-                     <div class="meme__label-down">Текст внизу</div>
+                     <div id="memeLabelBottom" class="meme__label-bottom">
+                        Текст внизу
+                     </div>
                   </div>
                   <button class="meme__save" onclick="saveAsImage()">
                      Сохранить мем как картинку
@@ -109,11 +117,7 @@
          <div class="footer__cr">2023</div>
       </footer>
 
-      <script src="js/model.js"></script>
-      <script src="js/view.js"></script>
-      <script src="js/api.js"></script>
-      <script src="js/controller.js"></script>
-      <script src="js/index.js"></script>
+      <script type="module" src="js/index.js"></script>
 
       <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
       <script>
