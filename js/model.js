@@ -11,16 +11,17 @@ export class Model {
    setMemes(memes) {
       if (!Array.isArray(memes)) {
          this.isErrorLoadMemes = true;
+      } else {
+         this.memes = memes;
       }
-
-      this.memes = memes;
 
       this.onMemesLoaded(this.memes, this.isErrorLoadMemes);
    }
 
    changeMemeImage(url) {
-      if (url === "") {
+      if (url == "") {
+         this.isErrorImageUrl = true;
       }
-      this.onNewMemeImage(url);
+      this.onNewMemeImage(url, this.isErrorImageUrl);
    }
 }

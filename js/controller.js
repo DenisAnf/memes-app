@@ -6,11 +6,11 @@ export class Controller {
    constructor() {
       this.model = new Model({
          onMemesLoaded: this.handleModelMemesLoaded,
-         onNewMemeImage: this.handleViewMemeImageChanged,
+         onNewMemeImage: this.handleModelMemeImageChanged,
       });
 
       this.view = new View({
-         onMemeImageChanged: this.handleModelMemeImageChanged,
+         onMemeImageChanged: this.handleViewMemeImageChanged,
       });
 
       this.api = new API();
@@ -25,7 +25,8 @@ export class Controller {
    handleModelMemesLoaded = (memes, isErrorLoadMemes) =>
       this.view.renderMemesOptionToSelect(memes, isErrorLoadMemes);
 
-   handleModelMemeImageChanged = (url) => this.model.changeMemeImage(url);
+   handleViewMemeImageChanged = (url) => this.model.changeMemeImage(url);
 
-   handleViewMemeImageChanged = (url) => this.view.renderMemeImage(url);
+   handleModelMemeImageChanged = (url, isErrorImageUrl) =>
+      this.view.renderMemeImage(url, isErrorImageUrl);
 }

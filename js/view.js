@@ -15,7 +15,6 @@ export class View {
    }
 
    renderMemesOptionToSelect(memes, isErrorLoadMemes) {
-      console.log(isErrorLoadMemes);
       if (isErrorLoadMemes) {
          this.errorNode.innerText =
             "Ошибка загрузки мемов из API, обновите страницу";
@@ -28,7 +27,13 @@ export class View {
       });
    }
 
-   renderMemeImage(url) {
+   renderMemeImage(url, isErrorImageUrl) {
+      if (isErrorImageUrl) {
+         this.errorNode.innerText =
+            "Картинка для мема отсутствует, выберите другой";
+         return;
+      }
+
       this.memeImageNode.src = url;
    }
 
