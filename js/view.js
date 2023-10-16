@@ -3,6 +3,7 @@ export class View {
       this.memesSelectNode = document.getElementById("memesSelect");
       this.labelTopNode = document.getElementById("labelTop");
       this.labelBottomNode = document.getElementById("labelBottom");
+      this.errorNode = document.getElementById("error");
 
       this.memeImageNode = document.getElementById("memeImage");
       this.memelabelTopNode = document.getElementById("memeLabelTop");
@@ -13,7 +14,13 @@ export class View {
       this.memesSelectNode.addEventListener("change", this._handleMemeSelect);
    }
 
-   renderMemesOptionToSelect(memes) {
+   renderMemesOptionToSelect(memes, isErrorLoadMemes) {
+      console.log(isErrorLoadMemes);
+      if (isErrorLoadMemes) {
+         this.errorNode.innerText =
+            "Ошибка загрузки мемов из API, обновите страницу";
+         return;
+      }
       memes.forEach((element) => {
          this.memesSelectNode.innerHTML += `
 				<option value="${element.url}">${element.name}</option>

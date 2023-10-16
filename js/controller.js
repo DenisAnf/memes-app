@@ -22,8 +22,8 @@ export class Controller {
       });
    }
 
-   handleModelMemesLoaded = (memes) =>
-      this.view.renderMemesOptionToSelect(memes);
+   handleModelMemesLoaded = (memes, isErrorLoadMemes) =>
+      this.view.renderMemesOptionToSelect(memes, isErrorLoadMemes);
 
    handleModelMemeImageChanged = (url) => this.model.changeMemeImage(url);
 

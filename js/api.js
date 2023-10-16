@@ -3,9 +3,12 @@ export class API {
       this.baseUrl = "https://api.imgflip.com";
    }
 
-   fetchMemes() {
-      return fetch(`${this.baseUrl}/get_memes`)
-         .then((response) => response.json())
-         .then((data) => data.data.memes);
+   async fetchMemes() {
+      const response = await fetch(`${this.baseUrl}/get_memes`);
+      if (!response.ok) {
+         alert("Ошибка загрузки мемов из API, обновите страницу");
+      }
+      const data = await response.json();
+      return data.data.memes;
    }
 }

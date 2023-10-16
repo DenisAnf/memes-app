@@ -82,6 +82,7 @@
                         />
                      </label>
                   </form>
+                  <p id="error" class="input__error"></p>
                </section>
 
                <section class="meme">
@@ -126,7 +127,7 @@
             html2canvas(element).then(function (canvas) {
                const link = document.createElement("a");
                document.body.appendChild(link);
-               link.download = "новый-мем-готов.jpg";
+               link.download = "Новый_мем_готов.jpg";
                link.href = canvas.toDataURL("image/png");
                link.target = "_blank";
                link.click();
