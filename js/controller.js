@@ -7,10 +7,13 @@ export class Controller {
       this.model = new Model({
          onMemesLoaded: this.handleModelMemesLoaded,
          onNewMemeImage: this.handleModelMemeImageChanged,
+         onChangeText: this.handleModelTextChanged,
       });
 
       this.view = new View({
          onMemeImageChanged: this.handleViewMemeImageChanged,
+         onTextInput: this.handleViewTextInput,
+         onMemeSave: this.handleViewMemeSave,
       });
 
       this.api = new API();
@@ -29,4 +32,12 @@ export class Controller {
 
    handleModelMemeImageChanged = (url, isErrorImageUrl) =>
       this.view.renderMemeImage(url, isErrorImageUrl);
+
+   handleViewTextInput = (topText, bottomText) =>
+      this.model.changeText(topText, bottomText);
+
+   handleModelTextChanged = (topText, bottomText, isErrorText) =>
+      this.view.renderText(topText, bottomText, isErrorText);
+
+   handleViewMemeSave = (meme) => this.model.saveMeme(meme);
 }

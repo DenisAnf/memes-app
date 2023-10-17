@@ -88,22 +88,18 @@
                <section class="meme">
                   <h2 class="meme__title">Мем:</h2>
                   <div class="meme__wrapper" id="meme">
-                     <div id="memeLabelTop" class="meme__label-top">
-                        Текст наверху
-                     </div>
+                     <div id="memeLabelTop" class="meme__label-top"></div>
                      <img
                         id="memeImage"
                         src="./resourses/img/memes.png"
                         alt="мем"
                         class="meme__img"
                      />
-                     <div id="memeLabelBottom" class="meme__label-bottom">
-                        Текст внизу
-                     </div>
+                     <div id="memeLabelBottom" class="meme__label-bottom"></div>
                   </div>
-                  <button class="meme__save" onclick="saveAsImage()">
+                  <!--<button id="memeSaveBtn" class="meme__save">
                      Сохранить мем как картинку
-                  </button>
+                  </button>-->
                </section>
             </div>
          </div>
@@ -118,21 +114,7 @@
          <div class="footer__cr">SD.CODE - 2023</div>
       </footer>
 
+      <!--<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>-->
       <script type="module" src="js/index.js"></script>
-
-      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-      <script>
-         function saveAsImage() {
-            var element = document.getElementById("meme");
-            html2canvas(element).then(function (canvas) {
-               const link = document.createElement("a");
-               document.body.appendChild(link);
-               link.download = "Новый_мем_готов.jpg";
-               link.href = canvas.toDataURL("image/png");
-               link.target = "_blank";
-               link.click();
-            });
-         }
-      </script>
    </body>
 </html>
