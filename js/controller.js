@@ -13,7 +13,7 @@ export class Controller {
       this.view = new View({
          onMemeImageChanged: this.handleViewMemeImageChanged,
          onTextInput: this.handleViewTextInput,
-         onMemeSave: this.handleViewMemeSave,
+         /*onMemeSave: this.handleViewMemeSave,*/
       });
 
       this.api = new API();
@@ -39,5 +39,5 @@ export class Controller {
    handleModelTextChanged = (topText, bottomText, isErrorText) =>
       this.view.renderText(topText, bottomText, isErrorText);
 
-   handleViewMemeSave = (meme) => this.model.saveMeme(meme);
+   /*handleViewMemeSave = (meme) => this.model.saveMeme(meme);*/
 }

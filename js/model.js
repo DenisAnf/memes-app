@@ -39,7 +39,7 @@ export class Model {
       return textOne.length <= 50 && textTwo.length <= 50;
    }
 
-   saveMeme = (meme) => {
+   /*saveMeme = (meme) => {
       html2canvas(meme).then(function (canvas) {
          const link = document.createElement("a");
          document.body.appendChild(link);
@@ -48,5 +48,5 @@ export class Model {
          link.target = "_blank";
          link.click();
       });
-   };
+   };*/
 }
