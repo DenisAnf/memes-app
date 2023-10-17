@@ -234,10 +234,15 @@ body {
 
 .meme__wrapper {
   position: relative;
-  background: #430179;
-  border-radius: 10px;
-  border: 1px solid #f3f6f9;
-  overflow: hidden;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 519px) {
+  .meme__wrapper {
+    width: 100%;
+  }
 }
 .meme__title {
   margin-bottom: 40px;
@@ -254,13 +259,16 @@ body {
   }
 }
 .meme__img {
-  display: block;
-  width: 500px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  background: #430179;
+  border-radius: 10px;
+  border: 1px solid #f3f6f9;
+  overflow: hidden;
 }
 @media (max-width: 519px) {
   .meme__img {
